@@ -1,10 +1,7 @@
 #!/bin/bash
-#!/bin/bash
-
-
 
 #
-# For Ubuntu distribution. Version 16.04 or higher is assumed.
+# For Ubuntu distribution Version 16.04 LTS
 #
 
 set -e
@@ -22,7 +19,7 @@ anaconda2_url=`ss-get anaconda2_url`
 sen2cor_url=`ss-get anaconda2_url`
 
 
-_install_sen2cor(){
+_install_sen2cor() {
 # Create installation temporary directory
 mkdir -p ~/installation
 cd ~/installation
@@ -96,7 +93,7 @@ L2A_Process --h
 echo "Clean-up installation"
 }
 
-_run_L2A_formating(){
+_run_L2A_formating() {
 # Create product generation folder
 cd /opt
 mkdir product
@@ -118,9 +115,9 @@ IMG_PRODUCT_LOC=RAW_PRODUCT_NAME/IMG_PRODUCT_NAME/GRANULE/IMG_DATA/R10m/
 }
 
 
-_install_sen2cor()
+_install_sen2cor
 
-#_run_L2A_formating(){
+#_run_L2A_formating
 
 ss-display "Sentinel-2 is ready!"
 ss-set ready true
